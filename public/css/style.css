@@ -38,3 +38,7 @@ header a {
 .card-footer {
   max-height: 40px;
 }
+
+#new-post {
+  min-height: 350px;
+}
