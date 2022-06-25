@@ -1,0 +1,28 @@
+<div class="text-center">
+      <div class="card mainPost">
+        <div class="card-header">
+          {{!-- <a href="/post/{{post.id}}"></a><h2>{{post.title}}</h2></a> --}}
+        </div>
+        <div class="card-body">
+          <p>{{post.postText}}</p>
+        </div>
+        <div class="card-footer">
+          <p>posted by user id: {{post.user_id}} on {{ post.date_created}}</p>
+          <span class="upVotes">{{post.upVotes}}<button class="btn btn-primary" id="up{{post.id}}">upVote</button></span>
+          <span class="dnVotes">{{post.downVotes}}<button class="btn btn-primary" id="dn{{post.id}}">downVote</button></span>
+        </div>
+</div>
+<div>
+  <h3>Comments</h3>
+</div>
+    {{!-- {{#each post.comment}} --}}
+      <div class="card post">
+        <div class="card-header">
+          {{!-- <a href="/post/{{post.id}}"></a><h3>{{post.title}}</h3></a> --}}
+        </div>
+        <div class="card-body">
+          <p>{{post.postText}}</p>
+        </div>
+        <div class="card-footer">
+          <p>comment posted by user id: {{post.user_id}} on {{format_date post.date_created}}</p>
+     {{!-- {{/each}}    --}}
