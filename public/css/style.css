@@ -43,6 +43,11 @@ h1, h2, h3 {
   max-height: 40px;
 }
 
-#new-post {
+#postText {
   min-height: 350px;
+}
+
+.buttonstyle {
+  margin-left: 35px;
+  margin-top: 15px;
 }

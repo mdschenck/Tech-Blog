@@ -4,15 +4,16 @@
   {{#each posts as |post|}}
       <div class="card post">
         <div class="card-header">
-          <a href="/post/{{post.id}}"></a><h3>{{post.title}}</h3></a>
+          <a href="/post/{{post.id}}"><h3>{{post.title}}</h3></a>
         </div>
         <div class="card-body">
           <p>{{post.postText}}</p>
         </div>
-        <div class="card-footer">
-          <p>posted by: {{post.user_id user.name}} on {{format_date post.date_created}}</p>
-          <span class="upVotes">{{post.upVotes}}<button class="btn btn-primary" id="up{{post.id}}">Upvote</button></span>
-          <span class="dnVotes">{{post.downVotes}}<button class="btn btn-primary" id="dn{{post.id}}">Upvote</button></span>
+        <div class="row card-footer">
+
+          <span class="upVotes">{{post.upVotes}}<button class="btn btn-success btn-sm" id="up{{post.id}}">yay!</button></span>
+          <span class="dnVotes">{{post.downVotes}}<button class="btn btn-danger btn-sm" id="dn{{post.id}}">boo!</button></span>
+          <p>posted by user id: {{post.user_id}} on {{format_date post.date_created}}</p>
         </div>
       </div>
 
@@ -21,6 +22,6 @@
 
 
 
-<div>
-  <a href="/create-pos" class="buttonstyle" id="create-post">Create Post</a>
+<div class="row">
+  <a href="/create-post" class="buttonstyle btn-primary btn-lg" id="create-post">Create Post</a>
 </div>
