@@ -6,12 +6,39 @@ router.post("/", async (req, res) => {
   try {
     const newPost = await Post.create({
       ...req.body,
-      // user_id: req.session.user_id,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newPost);
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+
+router.put("/", async (req, res) => {
+  try {
+    const postData = await Post.update(
+      {
+        upVotes: req.body.upVotes,
+      },
+      {
+        where: {
+          id: req.body.id,
+        },
+        // ...req.body,
+      }
+    );
+
+    if (!postData) {
+      res
+        .status(404)
+        .json({ message: "No post found to update with this id!" });
+      return;
+    }
+
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

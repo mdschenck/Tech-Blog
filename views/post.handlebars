@@ -1,15 +1,15 @@
 <div class="text-center">
       <div class="card mainPost">
         <div class="card-header">
-          <a href=`/post/{{post.id}}`></a><h2>{{post.title}}</h2></a>
+        <h2>{{post.title}}</h2>
         </div>
         <div class="card-body">
           <p>{{post.postText}}</p>
         </div>
-        <div class="card-footer">
-          <p>posted by user id: {{post.user_id}} on {{ post.date_created}}</p>
-          <span class="upVotes">{{post.upVotes}}<button class="btn btn-primary" id=`up{{post.id}}`>upVote</button></span>
-          <span class="dnVotes">{{post.downVotes}}<button class="btn btn-primary" id=`dn{{post.id}}`>downVote</button></span>
+        <div class="row card-footer">
+          <span class="upVotes">{{post.upVotes}}<button class="btn btn-success btn-sm" data-id="{{post.upVotes}}" id="{{post.id}}">yay!</button></span>
+          <span class="dnVotes" >{{post.downVotes}}<button class="btn btn-danger btn-sm" data-id="{{post.dnVotes}}" id="{{post.id}}">boo!</button></span>
+          <p>posted by user id: {{post.user_id}} on {{format_date post.date_created}}</p>
         </div>
 </div>
 <div>
@@ -25,4 +25,7 @@
         </div>
         <div class="card-footer">
           <p>comment posted by user id: {{post.user_id}} on {{post.date_created}}</p>
+        </div>
      {{!-- {{/each}}    --}}
+
+     <script src="/js/post.js"></script>
