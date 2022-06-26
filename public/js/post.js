@@ -52,8 +52,10 @@ const downVoteHandler = async (evt) => {
   document.location.reload();
 };
 
-document.querySelector(`.btn-success`).addEventListener("click", upVoteHandler);
+document.querySelectorAll(`.btn-success`).forEach((item) => {
+  item.addEventListener("click", upVoteHandler);
+});
 
-document
-  .querySelector(`.btn-danger`)
-  .addEventListener("click", downVoteHandler);
+document.querySelectorAll(`.btn-danger`).forEach((item) => {
+  item.addEventListener("click", downVoteHandler);
+});

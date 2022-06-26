@@ -1,6 +1,6 @@
-header, .project:not(:last-child) {
+/* header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
-}
+} */
 
 header a {
   color:slategray 

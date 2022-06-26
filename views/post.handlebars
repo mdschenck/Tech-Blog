@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="mainideas container col">
       <div class="card mainPost">
         <div class="card-header">
         <h2>{{post.title}}</h2>
@@ -12,20 +12,29 @@
           <p>posted by user id: {{post.user_id}} on {{format_date post.date_created}}</p>
         </div>
 </div>
-{{!-- <div>
+<div>
   <h3>Comments</h3>
 </div>
     {{!-- {{#each post.comment}} --}}
-      {{!-- <div class="card post">
-        <div class="card-header"> --}}
-          {{!-- <a href="/post/{{post.id}}"></a><h3>{{post.title}}</h3></a> --}}
-        {{!-- </div>
+      <div class="card post">
+
         <div class="card-body">
-          <p>{{post.postText}}</p>
+          <p>This is a sample comment - I wholeheartedly agree whith what you're saying here! Great ideas and implementation. Love it!</p>
         </div>
         <div class="card-footer">
-          <p>comment posted by user id: {{post.user_id}} on {{post.date_created}}</p>
-        </div> --}} 
+          <p>comment posted by user id: 6 on {{format_date post.date_created}}</p>
+        </div> 
+      </div>
+            <div class="card post">
+
+        <div class="card-body">
+          <p>This is another sample comment - I on the other hand, have to disagree. The Big O implications of this approach are something you have to keep in mind especially once the data is scaled up in production. I would rethink and try to find a more efficient algorithm.</p>
+        </div>
+        <div class="card-footer">
+          <p>comment posted by user id: 11 on {{format_date post.date_created}}</p>
+        </div> 
+      </div>
+
      {{!-- {{/each}}    --}}
 
      <script src="/js/post.js"></script>
