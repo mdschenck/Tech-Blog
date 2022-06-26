@@ -20,6 +20,7 @@ router.put("/", async (req, res) => {
     const postData = await Post.update(
       {
         upVotes: req.body.upVotes,
+        downVotes: req.body.downVotes,
       },
       {
         where: {

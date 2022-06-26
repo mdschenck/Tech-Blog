@@ -11,8 +11,8 @@
         </div>
         <div class="row card-footer">
 
-          <span class="upVotes">{{post.upVotes}}<button class="btn btn-success btn-sm" id="upVotes">yay!</button></span>
-          <span class="dnVotes">{{post.downVotes}}<button class="btn btn-danger btn-sm" id="dn{{post.id}}">boo!</button></span>
+          <span class="upVotes">{{post.upVotes}}<button class="btn btn-success btn-sm" data-id="{{post.upVotes}}" id="{{post.id}}">yay!</button></span>
+          <span class="dnVotes" >{{post.downVotes}}<button class="btn btn-danger btn-sm" data-id="{{post.downVotes}}" id="{{post.id}}">boo!</button></span>
           <p>posted by user id: {{post.user_id}} on {{format_date post.date_created}}</p>
         </div>
       </div>

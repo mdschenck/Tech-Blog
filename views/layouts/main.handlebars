@@ -22,14 +22,18 @@
           <a class="nav-item nav-link ml-auto" href="/">Home</a>
           <a class="nav-item nav-link ml-auto" href="/dashboard.html">Dashboard</a>
           <a class="nav-item nav-link ml-auto" href="/login">Login</a>
+                {{#if logged_in}}
           <a class="nav-item nav-link ml-auto" href="/">Logout</a>
+                {{/if}}
         </div>
       </div>
     </nav>
     </header>
     <div class="jumbotron">
       <h1 class="display-4">All things technology related...</h1>
-      <p>Log in to contribute!</p>
+      {{#if logged_in}}
+      <p>Welcome back! Create a new post or check out what others are saying!  </p>
+      {{/if}}
     </div>
     <main>
     <div class="container">
