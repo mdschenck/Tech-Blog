@@ -27,9 +27,9 @@ The Tech Blog is a remotely deployed full stack application that makes use of ma
 
 # Links
 
-The code repository is located at [GitHub Repository](https://github.com/mdschenck/Tech-Blog-)
+The code repository is located on GitHub at [https://github.com/mdschenck/Tech-Blog](https://github.com/mdschenck/Tech-Blog)
 
-The application is deployed on [Heroku](https://------.herokuapp.com/)
+The application is deployed on Heroku at [https://floating-escarpment-49352.herokuapp.com/](https://floating-escarpment-49352.herokuapp.com/)
 
 # User
 
